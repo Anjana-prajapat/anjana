@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+function validateForm() {
+  var x = document.forms["myForm"]["name"].value;
+  var letters = /^[A-Za-z]+$/;
+  if (x == letters) {
+    return true;
+   }
+  else {
+       alert("invalid input");
+       return false;
+  }
+}
+</script>
+<script>
+function validateForm2() {
+  var x = document.forms["myForm"]["number"].value;
+  var letters = /^[A-Za-z]+$/;
+  if (x == "" || x==letters) {
+   alert("name should be in letters");    
+   return false;
+   }
+  else {
+       return true;
+  }
+}
+</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="jumbotron text-center">
+ <img src="image1.svg" class="img-rounded" alt="Cinque Terre" width="50" height="50"> 
+    <h2>Checkout Form</h2>
+ <p>Below is an example form built entirely with Bootstrap's form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.</p>
+</div>
+<div class="container">
+    <div class="row">
+      <div class="col-sm-10">
+       <h3><b>Billing Address</b></h3>
+       <div class="form-group row">
+   <form name="myForm" action="/action_page.php" onsubmit="return validateForm()"              method="post">
+ First Name: <input type="text" name="name">
+</form>
+<form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+ Last Name: <input type="text" name="name">
+<input type="submit" name="submit">
+</form><br>
+
+       </div>
+   </div>
+  </div>
+</div>
+<br></br>
+ <form class="form-horizontal">
+    <div class="form-group">
+      <label class="control-label col-sm-2">Username:</label>
+          <div class="col-sm-6">
+   <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">            
+ <input type="text" class="form-control" id="name" placeholder="Enter name">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="email" method="post">Email:</label>
+      <div class="col-sm-6"> 
+        <input type="email" class="form-control" id="email" placeholder="Enter email"> 
+     </div> 
+  </div>
+  <div class="form-group">
+      <label class="control-label col-sm-2" for="address"  method="post">Address:</label>
+      <div class="col-sm-6"> 
+         <input type="address" class="form-control" id="email" placeholder="Enter Address">
+     </div>     
+  </div>
+  <div class="row">
+          <div class="col-md-5 mb-3">
+            <label for="country">Country</label>
+            <select class="custom-select d-block w-100" id="country" required>
+              <option value="">Choose...</option>
+              <option>United States</option>
+            </select>
+            <div class="invalid-feedback">
+              Please select a valid country.
+            </div>
+          </div>
+<div class="col-md-4 mb-3">
+            <label for="state">State</label>
+            <select class="custom-select d-block w-100" id="state" required>
+              <option value="">Choose...</option>
+              <option>California</option>
+            </select>
+            <div class="invalid-feedback">
+              Please provide a valid state.
+            </div>
+          </div>
+<div class="form-group">
+      <label class="control-label col-sm-1" for="code">Zipcode:</label>
+      <div class="col-sm-2"> 
+        <input type="code" class="form-control" placeholder="Zip code"> 
+      </div><br>
+ <input type="submit">
+</div>
+</div>
+</form>
+<p><br></p>
+<p>____________________________________________________________________________________________________________</p>
+<p><b> @ Shipping address is the same as my billing address</b></p>
+<br>
+<p><b>@ Save this information for next time</b></p>
+<p>_____________________________________________________________________________________________________________</p>
+<h5><b>Payment</b></h5>
+ <form>
+  <input type="radio" name="gender" value="male" checked> Credit Card<br>
+  <input type="radio" name="gender" value="female">Debit Card<br>
+  <input type="radio" name="gender" value="other"> Paypal
+</form> <br></br>
+ <div class="form-group row">
+  <div class="col-xs-4">
+<form name="myForm" action="/action_page.php" name="name" onsubmit="return validateForm()" method="post">
+    <label for="ex2">Name on card</label>
+    <input class="form-control" id="ex2" type="text">
+   <p>Full name display on card</p>
+    </div>
+      <div class="col-xs-4">
+ <form name="myForm" action="/action_page.php" name="name" onsubmit="return validateForm()" method="post">
+    <label for="ex3">Credit card Name</label>
+    <input class="form-control" id="ex3" type="text">
+   </div>
+ </div>
+<div class="form-group row">
+  <div class="col-xs-3">
+<form name="myForm" action="/action_page.php" name="number" onsubmit="return validateForm2()" method="post">
+    <label for="ex1">Expiration</label>
+    <input class="form-control" id="ex1" type="text">
+  </div>
+  <div class="col-xs-3">
+    <label for="ex2">CVV</label>
+    <input class="form-control" id="ex2" type="text">
+  </div>
+</div>
+ 
+
+
+            <pre>                                        @ 2017 2018 company name</pre>
+<center> <nav class="nav">
+  <a class="nav-link active" href="#">Privacy</a>
+  <a class="nav-link" href="#">Term</a>
+  <a class="nav-link" href="#">Support</a>
+</nav></center><br>
+</div>
+    <div class="col-sm-2">
+      <div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h3 class="card-title">Your Card</h3>
+    </div>
+      <ul class="list-group list-group-flush">
+<pre><li class="list-group-item"><b>Product Name</b>   $12
+<p>brief description</p></li>
+<li class="list-group-item"><b>Second Product</b>  $5
+<p>brief description</p></li>
+<li class="list-group-item"><b>Third item</b>    $8
+<p>brief description</p></li>
+<li style="color:MediumSeaGreen;" class="list-group-item"><b>Promo Code</b>   -$5
+<p>brief description</p></li>
+<li class="list-group-item"><b>Total USD</b>    $20
+<p>Example code</p></li></pre>
+      </ul>
+    <div class="card-body">
+    <form class="form-inline">
+<div class="container">
+  <div class="btn-group">
+    <button type="button" class="btn btn-default">Promocode</button>
+    <button type="button" class="btn btn-primary">Redeem</button>
+  </div>
+</div>
+
+</form>
+       </div>
+      </div>
+  </div>
+   
+  </div>
+</div>
+
+</body>
+</html>
+
